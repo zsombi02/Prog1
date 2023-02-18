@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1602663007 source:c:\users\zsomb\onedrive\dokumentumok\prog1\gps\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "debugmalloc.h"
+
+typedef struct fa {
+int ertek;struct fa *bal, *jobb;
+} BinTree;
+
+BinTree *beszur(BinTree *gyoker, int ertek)
+{
+    if (gyoker == NULL)
+    {
+        BinTree *uj=(BinTree*) malloc(sizeof(BinTree));
+        uj->ertek=ertek;
+        uj->bal = uj->jobb = NULL;
+            return uj;
+    }
+    if (ertek < gyoker->ertek)
+        gyoker->bal = beszur(gyoker->bal, ertek);
+    if (ertek > gyoker->ertek)
+        gyoker->jobb = beszur(gyoker->jobb, ertek);
+        return gyoker;
+}
+
+
+void torol(BinTree *gyoker)
+{
+    if (gyoker != NULL) {
+        torol(gyoker->jobb);
+        torol(gyoker->bal);
+        free(gyoker);
+    }
+}
+
+
+
+void rendez(BinTree *gyoker)
+{
+    if (gyoker != NULL)
+    {
+        rendez(gyoker->bal);
+        printf("%d ", gyoker->ertek);
+        rendez(gyoker->jobb);
+    }
+}
+
+
+
+int elemszam(BinTree *gyoker)
+{
+    if (gyoker==NULL)
+        return 0;
+    else
+        return elemszam(gyoker->bal) + elemszam(gyoker->jobb) + 1;
+}
+
+
+
+int osszegez(BinTree *gyoker)
+{
+    if (gyoker==NULL)
+        return 0;
+    else
+        return osszegez(gyoker->bal) + osszegez(gyoker->jobb) + gyoker->ertek;
+}
+
+
+
+BinTree* keres(BinTree *gyoker, int mit)
+{
+    if (gyoker!=NULL) {
+        if (gyoker->ertek==mit) return gyoe;
+        if (gy->ertek>mit) return keres(gy->bal, mit);
+        if (gy->ertek<mit) return keres(gy->jobb, mit);
+    }
+    return NULL;
+}
+
+
+int main() {
+    int i;
+    BinTree *gyoker=NULL;
+    int minta[]={15, 96, 34, 12, 14, 56, 21, 11, 10, 9, 78, 43, 0};
+    BinTree *ker;
+
+
+    for (i=0; minta[i]>0; i++)
+        gyoker=beszur(gyoker, minta[i]);
+
+    rendez(gyoker);
+    printf("\nElemszam: %d\n", elemszam(gyoker));
+    printf("Elemek osszege: %d\n", osszegez(gyoker));
+
+    ker = keres(gyoker, 56);
+    printf("Kereses: %d\n", ker->ertek);
+
+    torol(gyoker);
+
+    return 0;
+}
