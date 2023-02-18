@@ -1,0 +1,146 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+typedef struct palyak{
+int jatekos; int palya[10][20]; int hajok[10][20]
+} palyak;
+typedef struct hajo{
+char irany; char x; int xx; int y; int hossz
+} hajo;
+
+void feltolt(int tomba[][20], int tombb[][20])
+{
+      for( int i = 0; i < 10; i++)
+        {
+            for( int j = 0; j < 20; j = j+2)
+            {
+                tomba[i][j] = 0;
+                tomba[i][j+1] = 1;
+            }
+
+        }
+         for( int i = 0; i < 10; i++)
+        {
+            for( int j = 0; j < 20; j = j+2)
+            {
+                tombb[i][j] = 0;
+                tombb[i][j+1] = 1;
+            }
+
+        }
+}
+void rajz(int tomb[][20])
+{   printf("\n \n");
+          printf("   A B C D E F G H I J \n");
+       for( int i = 0; i < 10; i++)
+        {   printf("%2d ", i+1);
+            for( int j = 0; j < 20; j++)
+            {
+                if(tomb[i][j] == 0)
+                    printf("O");
+                if(tomb[i][j] == 1)
+                    printf(" ");
+                if(tomb[i][j]== 2)
+                    printf("H");
+                    //printf("%d", tomb[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+}
+void betolt(int hajok[10][20], struct hajo hajo)
+{
+    //hajo.hossz = hajo.hossz*2;
+    hajo.x = tolower(hajo.x);
+    switch(hajo.x)
+    {case 'a':
+        {hajo.xx = 0;
+        break;}
+    case 'b' :
+        {hajo.xx = 1;
+        break;}
+    case 'c' :
+        {hajo.xx = 2;
+        break;}
+    case 'd' :
+        {hajo.xx = 3;
+        break;}
+    case 'e' :
+        {hajo.xx = 4;
+        break;}
+    case 'f' :
+        {hajo.xx = 5;
+        break;}
+    case 'g' :
+        {hajo.xx = 6;
+        break;}
+    case 'h' :
+        {hajo.xx = 7;
+        break;}
+    case 'i' :
+        {hajo.xx = 8;
+        break;}
+    case 'j' :
+        {hajo.xx = 9;
+        break;}
+    default:
+        printf("nem ervenyes betu");
+    }
+    hajo.xx = hajo.xx*2;
+     if(hajo.irany == 'v' || hajo.irany == 'V')
+        {if(hajo.xx <= 20-(hajo.hossz*2))
+            {
+            for(int i = hajo.xx; i< (hajo.xx + (hajo.hossz*2)); i = i +2)
+                hajok[hajo.y-1][i] = 2;
+            }
+        }
+    if(hajo.irany == 'f' || hajo.irany ==  'F')
+    {   if(hajo.y-1 <= 10-(hajo.hossz/2))
+            {
+            for(int i = hajo.y-1; i< (hajo.y + (hajo.hossz/2)-1); i++)
+                hajok[i][hajo.xx] = 2;
+            }
+    }
+}
+
+int main()
+{
+    struct palyak egy;
+    struct palyak ketto;
+    struct hajo hajo;
+
+    feltolt(egy.palya, egy.hajok);
+    rajz(egy.palya);
+    rajz(egy.hajok);
+    int elerheto[] = {2,3,3,4,4,5};
+    int vanhajo = 21;
+    while( vanhajo > 0)
+    {
+        printf("elerheto hajok:");
+
+        for(int i = 0; i<6; i++)
+        printf("%d  ", elerheto[i]);
+
+        printf("\nadd meg a hajot (pl: v a3 5) ");
+        hajo.hossz = 0;
+        scanf("%c%c%d%d", &hajo.irany, &hajo.x, &hajo.y, &hajo.hossz);
+//        printf("%c %c %d %d", hajo.irany, hajo.x, hajo.y, hajo.hossz);
+        int igen = 1;
+        for(int i = 0; igen == 1; i++)
+            {
+                if((hajo.hossz) == elerheto[i])
+                {   elerheto[i] = 0;
+                    igen =0;
+                }
+            }
+        vanhajo = vanhajo - (hajo.hossz);
+        betolt(egy.hajok, hajo);
+        rajz(egy.hajok);
+        printf("%d vanhajo", vanhajo);
+    }
+
+
+
+
+    return 0;
+}

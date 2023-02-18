@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1606657428 source:c:\users\zsomb\onedrive\dokumentumok\prog1\nagyhaziv5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	<string.h>
+	"debugmalloc.h"
+	<ctype.h>
+
+1606331121 c:\users\zsomb\onedrive\dokumentumok\prog1\nagyhaziv5\debugmalloc.h
+	<stdbool.h>
+	<stddef.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdarg.h>
+	<process.h>
+	<unistd.h>
+
+1606665592 source:c:\users\zsomb\onedrive\dokumentumok\prog1\nagyhaziv5\palyakez.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	<string.h>
+	"debugmalloc.h"
+	<ctype.h>
+	"palyakez.h"
+
+1606665785 c:\users\zsomb\onedrive\dokumentumok\prog1\nagyhaziv5\palyakez.h
+
+1606670192 source:c:\users\paszt\desktop\nagyhazi\fajlkez.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	<string.h>
+	"debugmalloc.h"
+	<ctype.h>
+	"palyakez.h"
+	"fajlkez.h"
+
+1606670192 c:\users\paszt\desktop\nagyhazi\debugmalloc.h
+	<stdbool.h>
+	<stddef.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdarg.h>
+	<process.h>
+	<unistd.h>
+
+1606670192 c:\users\paszt\desktop\nagyhazi\palyakez.h
+
+1606670324 c:\users\paszt\desktop\nagyhazi\fajlkez.h
+
+1606670192 source:c:\users\paszt\desktop\nagyhazi\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	<string.h>
+	"debugmalloc.h"
+	<ctype.h>
+	"palyakez.h"
+	"fajlkez.h"
+
+1606670656 source:c:\users\paszt\desktop\nagyhazi\palyakez.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	<string.h>
+	"debugmalloc.h"
+	<ctype.h>
+	"palyakez.h"
+	"fajlkez.h"
+
+1606670618 source:c:\users\paszt\desktop\nagyhazi\hajo.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	<string.h>
+	"debugmalloc.h"
+	<ctype.h>
+	"palyakez.h"
+

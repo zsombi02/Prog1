@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1601319868 source:c:\users\zsomb\onedrive\dokumentumok\prog1\legkisebb\main.c
+	<stdio.h>
+	<stdlib.h>
+

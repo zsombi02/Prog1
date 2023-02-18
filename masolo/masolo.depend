@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1604684782 source:c:\users\zsomb\onedrive\dokumentumok\prog1\masolo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

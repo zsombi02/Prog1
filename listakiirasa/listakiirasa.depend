@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1606083942 source:c:\users\zsomb\onedrive\dokumentumok\prog1\listakiirasa\main.c
+	"lista.h"
+	"lista.c"
+	<stdlib.h>
+	<stdio.h>
+
+1606083942 c:\users\zsomb\onedrive\dokumentumok\prog1\listakiirasa\lista.h
+
+1606084015 c:\users\zsomb\onedrive\dokumentumok\prog1\listakiirasa\lista.c
+	"lista.h"
+	<stdlib.h>
+	<stdio.h>
+

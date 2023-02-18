@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1605282966 source:c:\users\zsomb\onedrive\dokumentumok\prog1\nagyhazi\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
