@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1601029484 source:c:\users\zsomb\onedrive\dokumentumok\prog1\2labor\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1601029484 source:c:\users\zsomb\onedrive\dokumentumok\prog1\tartaly\main.c
+	<stdio.h>
+	<stdlib.h>
+

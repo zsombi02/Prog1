@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1604060584 source:c:\users\zsomb\onedrive\dokumentumok\prog1\szamokvisszafele\main.c
+	<stdio.h>
+	<stdlib.h>
+
